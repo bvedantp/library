@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+header {
+    align-self: stretch;
+    text-align: center;
+    padding: 13px;
+    background-color: #a04f2f;
+    color: rgb(228, 228, 228);
+    font-weight: 700;
+    font-size: large;
+}
+
+.new-book {
+    align-self: stretch;
+    background-color: #a04f2f46;
+    display: flex;
+    justify-content: flex-end;
+    padding: 9px 18px;
+}
+
+.new-book button {
+    align-self: center;
+    text-align: center;
+    font-size: medium;
+    padding: 9px;
+    border: 3px dotted #a04f2f;
+    border-radius: 24px;
+    color: #a04f2f;
+    background-color: #a04f2f15;
+}
+
+.card-area {
+    padding: 9px;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: whitesmoke;
+    justify-content: space-around;
+    gap: 9px;
+    margin-top: 27px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #a04f2f;
+    padding: 9px;
+    gap: 9px;
+    background-color: #a04f2f46;
+    border-radius: 9px;
+    flex: 1;
+    max-width: 240px;
+}
+
+.card p {
+    color: #a04f2f;
+    text-align: center;
+}
+
+.card button {
+    padding: 9px;
+    border: 3px solid #a04f2f;
+    border-radius: 24px;
+    color: #a04f2f;
+    background-color: #a04f2f15;  
+    flex: 1; 
+}
+
+.card div {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #a04f2f;
+    color: whitesmoke;
+    text-align: center;
+    padding: 9px;
+    font-size: smaller;
+  }
