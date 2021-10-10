@@ -12,15 +12,38 @@
     <div class="new-book">
         <button>+New Book</button>
     </div>
-    <div class="card-area">
-        <div class="card">
+    <div id="card-area">
+      <!--  <div class="card">
             <p>Title</p>
             <p>Author</p>
             <p>Pages</p>
-            <button type="radio">Read</button>
+            <div class="read">
+                <input type="checkbox" checked id="read"><label for="read">Read</label>
+            </div>
             <div>
                 <button>Remove</button>
                 <button>Edit</button>
+            </div>
+        </div> -->
+    </div>
+    <div id="modal-box" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Book</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="book-add" name="book-add">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author">
+                    <label for="pages">Pages</label>
+                    <input type="text" id="pages" name="pages">
+                    <input type="checkbox" id="read" name="read" value="checked">
+                    <label for="read">Reading complete?</label>
+                    <input type="button" value="Submit" id="form-submit">
+                </form>
             </div>
         </div>
     </div>
