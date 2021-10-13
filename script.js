@@ -10,6 +10,17 @@ const inputTitle = document.getElementById('title');
 const inputAuthor = document.getElementById('author');
 const inputPages = document.getElementById('pages');
 
+window.onload = checkLibrary();
+function checkLibrary() {
+    if(!localStorage.getItem("myLibrary")) {
+        let myLibrary = [];
+        displayBook(myLibrary);
+    } else {
+        let storedArray = localStorage.getItem("myLibrary");
+        myLibrary = JSON.parse(storedArray);
+        displayBook(myLibrary);
+    }
+}
 
 function Book(title, author, pages, read) {
     this.title = title
@@ -20,6 +31,7 @@ function Book(title, author, pages, read) {
 
 function addBooktoLibrary(userInput) {
     myLibrary.push(userInput);
+    localStorage.setItem("myLibrary",JSON.stringify(myLibrary)); //set to localStorage
 }
 
 function displayBook(library) {
@@ -45,6 +57,7 @@ window.addEventListener('click',(e)=> {
     if(e.target.value == 'removeit') {
         let currIndex= e.target.dataset.position;
         myLibrary.splice(currIndex, 1); //delete particular array
+        localStorage.setItem("myLibrary",JSON.stringify(myLibrary)); // set it again so it updates with new array
         displayBook(myLibrary);
     }
 })
